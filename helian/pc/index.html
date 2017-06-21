@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>合链科技</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.1.min.css"/>
+		<style type="text/css"> 
+		.boxed{
+			width: 100%;
+			min-width: 1200px;
+			height: 700px;
+			position: relative;
+			background: url(img/beijing.jpg) no-repeat;
+			background-size: cover;
+			cursor: pointer;
+			}
+		.cb-dust__particles{
+			position: absolute; 
+			z-index: 10; 
+			top: 0px; 
+			left: 0px; 
+			width: 100%; 
+			} 
+		/*导航1*/
+		.super_nav_first{
+			width: 100%;
+			min-width: 1200px;
+			height: 76px; 
+			/*border-bottom: 1px solid rgba(255,255,255,0.15); */
+		}
+		.nav_first{
+			width: 1200px;
+			height: 76px;
+			line-height: 76px;
+			margin: 0 auto; 
+		} 
+		.nav_first ul{
+			width: auto;
+			height: 76px;
+			line-height: 76px;
+			float: right;
+		}
+		.nav_first ul li{
+			position: relative;
+			display: inline-block;
+			margin: 0 12px;
+			font-size: 14px;
+			color: #FFFFFF;
+		}
+		.nav_first ul li span{ 
+			display:block;
+		    position:absolute; 
+		    width:0px; 
+		    height:0px; 
+		    background:#FFFFFF;
+		    top:48px;
+		    left:60%;
+		    }
+		
+		/*导航2*/
+		.super_nav_second{
+			display: none;
+			position: fixed;
+			z-index: 1000;
+			top: 0;
+			width: 100%;
+			min-width: 1200px;
+			height: 76px; 
+			background: #FFFFFF; 
+			box-shadow:0px 0 0px #FFFFFF,  
+		               0px 0 0px yellow, 
+		               0 0px 0px blue,   
+		               0 5px 5px rgba(0,0,0,0.5);   
+		}
+		.nav_second{
+			width: 1200px;
+			height: 76px;
+			line-height: 76px;
+			margin: 0 auto; 
+		}
+		.nav_second ul{
+			width: auto;
+			height: 76px;
+			line-height: 76px;
+			float: right;
+		}
+		.nav_second ul li{
+			display: inline-block;
+			margin: 0 12px;
+			font-size: 14px;
+			color: #282828;
+			position: relative;
+		}
+		.nav_second ul li span{ 
+			display:block;
+		    position:absolute; 
+		    width:0px; 
+		    height:0px; 
+		    background:#282828;
+		    top:48px;
+		    left:60%;
+		    }
+		.fullscreen_text{
+			position: absolute;
+			z-index: 100;
+			width: 39%;
+			height: 140px;
+			top: 48%;
+			left: 31%;
+			margin-top: -70px;
+		}
+		/*我们的服务*/
+		.ind_server li{ 
+		    position:relative; 
+		    }
+		.ind_server li span{ 
+			display:block;
+		    position:absolute; 
+		    width:0px; 
+		    height:0px; 
+		    background:#0a72d0;
+		    top:0;
+		    left:0;
+		    }
+		    .nav_top2 {
+		    	width: 80px;
+		    	height: 344px;
+		    	color: #282828;
+		    	font-size: 14px;
+		    	position: fixed;
+		    	right: 40px;
+		    	top: 400px;
+		    	z-index: 999;
+		    }
+		    .nav_top2 li{
+		    	width: 20px;
+		    	height: 20px;
+		    	background: url(img/yuan1.png) center no-repeat;
+		    	background-size:cover ;
+		    	border-radius:50% ;
+		    	margin:20px auto;
+		    	cursor: pointer;
+		    }
+		    .nav_top2 .oli{
+		    	background: url(img/yuan2.png) center no-repeat;
+		    	background-size:cover ;
+		    }
+		    .nav_top3 .ali{
+		    	color: #62a7f5;
+		    }
+		    /*swiper*/
+		   #outer {
+		   		position:relative;
+				overflow:hidden;
+			    width: 100%;
+			    height: 200px;
+			}
+			#inner{
+				position:absolute;
+				left:0;
+				top:0;
+				overflow:hidden;
+				width:2600px;
+				height:200px;
+			} 
+			.swiper-slide{
+				width: 240px;
+				height: 200px;
+				float: left;
+			}
+			.swiper-slide img{
+				display: block;
+				width: 66px;
+				height: 66px;
+				margin: 54px auto;
+			} 
+			.swiper-slide h4{
+				width: 100%;
+				font-size: 18px;
+				text-align: center;
+				color: #FFFFFF;
+				font-weight: 100;
+			}
+			.all_wrap{
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: #FFFFFF;
+				z-index: 9999;
+				text-align: center;
+				line-height: 300px;
+				font-size: 36px;
+				display: none;
+			}
+		</style> 
+	</head>
+	<body>
+		<ul class="nav_top2 nav_top">
+		  	<li class="oli"></li>
+		  	<li></li>
+		  	<li></li>
+		  	<li></li>
+		  	<li></li>
+		  	<li></li>
+		  	<li></li> 
+		</ul>
+		<!--满屏效果-->
+		<div class="w_wrap">
+			<div class="boxed">
+				<div class="cb-dust__particles" id="cb-dust-particles" style="height: 1000px;">
+				<canvas class="particles-js-canvas-el" style="height: 700px;"></canvas>
+				
+				<!--导航1-->
+				<div class="super_nav_first">
+				 <div class="nav_first">
+				  <img class="he_logo" src="img/logo.png"/>
+				  <ul class="nav_top">
+				  	<li> 合链 <span></span></li>
+				  	<li> 技术优势<span></span> </li>
+				  	<li> 应用场景 <span></span></li>
+				  	<li> 服务内容 <span></span></li>
+				  	<li> 合作方式 <span></span></li>
+				  	<li> 加入我们 <span></span></li>
+				  	<li> 关于我们 <span></span></li> 
+				  </ul>
+				 </div>
+				</div>
+				<!--导航1-end-->
+				
+				<!--导航2-->
+				<div class="super_nav_second">
+				 <div class="nav_second">
+				  <img class="he_logo" src="img/logo3.png"/>
+				  <ul class="nav_top nav_top3">
+				  	<li> 合        链<span></span></li>
+				  	<li> 技术优势<span></span></li>
+				  	<li> 应用场景 <span></span></li>
+				  	<li> 服务内容<span></span></li>
+				  	<li> 合作方式<span></span> </li>
+				  	<li> 加入我们 <span></span></li>
+				  	<li> 关于我们<span></span></li> 
+				  </ul>
+				 </div>
+				</div>
+				<!--导航2-end-->
+				
+				
+				<div class="fullscreen_text" id="b1">
+				 <h2 class="fullscreen_h2"> 合链科技    &nbsp; ECOblockchain </h2>
+				 <p class="fullscreen_p"> 打造基于区块链技术的生态系统 </p>
+				</div>
+			    </div>
+			</div>
+			<!--满屏效果end-->
+		</div>
+		<div class="w_wrap">
+			<div class="w">
+				<div class="modular">
+					<div class="ind_title">
+						<h3>我们的技术优势</h3>
+						<p>用了即插即用的共识机制，源自比特币技术，安全机制有保障</p>
+					</div>
+					<div class="ind_ul_wrap">
+						<li>
+							<div class="ind_ul_img">
+								<img src="img/22.png" alt="" />
+							</div>
+							<h4>安全机制</h4>
+							<p>
+								安全机制包括：加密算法、隐私保护、权限控制、单数据访问频度控制。
+							</p>
+						</li>
+						<li>
+							<div class="ind_ul_img">
+								<img src="img/11.png" alt="" />
+							</div>
+							<h4>共识机制</h4>
+							<p>
+公司区块链采用了即插即用的共识机制，针对私有链，联盟链，公有链提供了多种灵活的共识机制，针对建设生态为主要目的的联盟链，当前公司提供了POW、POS、PBFT、dBFT、DPOS 与 POT (Proof of Time)共识机制，并且新增结点采用入口验证准入机制。
+							</p>
+						</li>
+						<li>
+							<div class="ind_ul_img">
+								<img src="img/33.png" alt="" />
+							</div>
+							<h4>成熟稳定</h4>
+							<p>
+								借鉴目前多种成熟的区块链技术，打造出成熟稳定的区块链底层技术平台，以适用于灵活多变的商业应用场景。
+							</p>
+						</li>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w_wrap w_wrap1" >
+			<div class="w">
+				<div class="ind_title" style="color: #FFFFFF;">
+					<h3 style="margin-top:90px ;">应用场景 </h3>
+				</div>
+				<!--<div class="yingyong_bot">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="img/shuzizichan.png"/>
+								<h4>数字资产</h4>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/gongyinglian.png"/>
+								<h4>供应链金融</h4>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/yiliaofuwu.png"/>
+								<h4>医疗服务</h4>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/suyuanxitong.png"/>
+								<h4>溯源系统</h4>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/zhaiquanzichan.png"/>
+								<h4>债券资产</h4>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/fenxiangjingji.png"/>
+								<h4>分享经济</h4>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/gongyiyingyong.png"/>
+								<h4>公益应用</h4>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/baoxianlingyu.png"/>
+								<h4>保险领域</h4>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/zhongchou.png"/>
+								<h4>股权众筹</h4>
+							</div>
+						</div>
+					</div>
+				</div>-->
+				<div id="outer">
+					<div id="inner">
+						<div class="swiper-slide">
+							<img src="img/shuzizichan.png"/>
+							<h4>数字资产</h4>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gongyinglian.png"/>
+							<h4>供应链金融</h4>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/yiliaofuwu.png"/>
+							<h4>医疗服务</h4>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/suyuanxitong.png"/>
+							<h4>溯源系统</h4>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/zhaiquanzichan.png"/>
+							<h4>债券资产</h4>
+						</div>
+						
+						<div class="swiper-slide">
+							<img src="img/fenxiangjingji.png"/>
+							<h4>分享经济</h4>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/gongyiyingyong.png"/>
+							<h4>公益应用</h4>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/baoxianlingyu.png"/>
+							<h4>保险领域</h4>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/zhongchou.png"/>
+							<h4>股权众筹</h4>
+						</div>
+					</div>
+				</div>
+				<div class="yingyong_fot">
+					获得效果：创新用户场景、降低运维成本、提高业务效率、信任倍增。结合不同应用场景的各个合作方形成合力与协调机制，整合区块链资源。针对成员间业务逻辑的差异，区块链将会根据具体情况度身定制不同的业务应用方案。公司将基于区块链的多中心化、防篡改等特性，打造值得信任的服务，为各行业在互联网上的业务开展提供了坚实可靠的安全基础和透明可信的服务。
+				</div>
+				
+			</div>
+		</div>
+		<div class="w_wrap w_wrap2" >
+			<div class="w">
+				<div class="ind_title">
+					<h3 style="margin-top:90px ;">服务内容 </h3>
+					<p>我们以用户的需求主导产品研发,提供开发高性能、高可扩展性、高可控的区块链底层技术</p>
+				</div>
+				<div class="ind_server ">
+					<li>
+						<span></span>
+						<img src="img/tu1.png"/>
+						<h3>
+							存证服务
+						</h3>
+						<div class="chan_bot">
+							<p>存储用户数据，用于确权</p>
+							<p>存储用户数据</p>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<img src="img/tu2.png"/>
+						<h3>
+							数字资产流转
+						</h3>
+						<div class="chan_bot">
+							<p>将用户实体资产转换为数字资产，并记录</p>
+							<p>数字资产流转过程，包括根据智能合约完</p>
+							<p>成资产自动流转的功能</p>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<img src="img/tu3.png"/>
+						<h3>
+							区块链技术平台搭建
+						</h3>
+						<div class="chan_bot">
+							<p>帮助第三方用户搭建自己的区块链平台</p>
+						</div>
+					</li>
+				</div>
+			</div>
+		</div>
+		<div class="w_wrap w_wrap_3">
+			<div class="w">
+				<div class="ind_title" style="color: #FFFFFF;">
+					<h3>合作方式 </h3>
+					<!--<p>交易、存证与证伪、账户、其他不可更改数据存储；供应链溯源、数字资产发行、股权众筹；</p>-->
+				</div>
+				<div class="ind_neirong">
+					<li>
+						<img src="img/1_15.png"/>
+						<div class="neirong_bot">
+							<p>区块链基础服务平台</p>
+						</div>
+					</li>
+					<li>
+						<img src="img/2.png"/>
+						<div class="neirong_bot">
+							<p>区块链项目</p>
+							<p class="plp">提供行业解决方案，与具体需求相结合，深度定制行业应用。</p>
+						</div>
+					</li>
+					<li>
+						<img src="img/3.png"/>
+						<div class="neirong_bot neirong_bot1">
+							<p>更多合作方式，欢迎洽谈</p>
+						</div>
+					</li>
+				</div>
+			</div>
+		</div>
+		<div class="w_wrap" style="background: #f0f2f8;">
+			<div class="w">
+				<div class="ind_title">
+					<h3>加入我们 </h3>
+					<p>如果您对我们的职位感兴趣，请将您的简历发送至<a href="mailto:hr@eco-chain.com" target="_top">hr@eco-chain.com</a>我们会尽快联系您。</p>
+				</div>
+				<div class="ind_join">
+					<ul>
+						<li>
+							<h4><span style="font-weight: 900;">产品市场经理</span></h4>
+						</li>
+						<li>
+							<h4><span>工作需求</span><img class="add" src="img/jia.png"/><img class="even" src="img/jian.png"/></h4>
+							<div class="join_bot">
+								<p>负责产品规划，根据市场需求，竞争态势和资源状况，收集、分析用户需求，合理规划版本需求范围，深入把握产品核心价值，对产品进行全面设计，加强产品创新，确保产品功能满足用户的需求。</p>
+							</div>
+						</li>
+						<li>
+							<h4><span>岗位职责</span><img class="add" src="img/jia.png"/><img class="even" src="img/jian.png"/></h4>
+							<div class="join_bot">
+								<p>1、负责产品规划，根据市场需求，竞争态势和资源状况，收集、分析用户需求，合理规划版本需求范围，深入把握产品核心价值，对产品进行全面设计,加强产品创新，确保产品功能满足用户的需求；</p>
+								<p>2、跟踪监控产品研发过程,及时了解产品的研发情况，跟踪监控产品研发的质量和进度，对产品需求实现进行验证，组织产品验收和发布；</p>
+								<p>3、 需求阶段制作高保真的网站原型，包括交互、跳转流程、按钮放置位置，图片展示尺寸、界面文案,编写产品推广宣传文案及各类产品需求文档。</p>
+							</div>
+						</li>
+						<li>
+							<h4><span>任职要求</span><img class="add" src="img/jia.png"/><img class="even" src="img/jian.png"/></h4>
+							<div class="join_bot">
+								<p>1、5年以上PD工作经验，具有2年以上管理经验尤佳；</p>
+								<p>2、熟悉产品生命周期管理(PLC)、产品设计(PD)、商业流程分析(BA)、及优秀的UE设计能力；</p>
+								<p>3、熟悉区块链BlockChain或金融行业Financial发展趋势，了解行业需求，在专业领域进行深度研究、产品创新，提升产品竞争力；</p>
+								<p>4、具备优秀的逻辑思维及结构化思维、条理清晰、反应迅速、对数字高敏感度。</p>
+							</div>
+						</li>
+						
+					</ul>
+					<ul>
+						<li>
+							<h4><span style="font-weight: 900;">区块链高级系统架构师</span></h4>
+						</li>
+						<li>
+							<h4><span>工作需求</span><img class="add" src="img/jia.png"/><img class="even" src="img/jian.png"/></h4>
+							<div class="join_bot">
+								<p>熟练掌握GoLang，C++等主流区块链系统开发语言，参与各个区块链开发社区并贡献源码者优先，参与公司区块链底层核心模块和架构的开发。</p>
+							</div>
+						</li>
+						<li>
+							<h4><span>岗位职责</span><img class="add" src="img/jia.png"/><img class="even" src="img/jian.png"/></h4>
+							<div class="join_bot">
+								<p>1、负责区块链架构设计；</p>
+								<p>2、理解各类主流的共识算法，包括不限于PoW，PoS，DPoS，PBFT，Paxos，Raft等；</p>
+								<p>3、熟练掌握GoLang，C++等主流区块链系统开发语言，参与各个区块链开发社区并贡献源码者优先，参与公司区块链底层核心模块和架构的开发；</p>
+								<p>4、组织公司技术人员完成区块链底层开发工作。</p>
+							</div>
+						</li>
+						<li>
+							<h4><span>任职要求</span><img class="add" src="img/jia.png"/><img class="even" src="img/jian.png"/></h4>
+							<div class="join_bot">
+								<p>1、至少10年以上IT互联网相关经验；</p>
+								<p>2、本科及以上学历，计算机、软件等相关专业；</p>
+								<p>3、精通C++、Java、C#中至少一种主流编程语言，熟悉Go、Python、Javascript等常用编程语言；</p>
+								<p>4、精通各种数据结构和算法，对密码学，安全协议和加密算法有研究；</p>
+								<p>5、有加密货币或区块链技术实际实施经验的优先。</p>
+							</div>
+						</li>
+						
+					</ul>
+					<ul>
+						<li>
+							<h4><span style="font-weight: 900;">资深UE交互设计师</span></h4>
+						</li>
+						<li>
+							<h4><span>工作需求</span><img class="add" src="img/jia.png"/><img class="even" src="img/jian.png"/></h4>
+							<div class="join_bot">
+								<p>负责公司产品的原型界面及交互设计流程，对产品需求有清晰准确的理解能力，定义产品交互模型并执行关键用户流程交互设计。</p>
+							</div>
+						</li>
+						<li>
+							<h4><span>岗位职责</span><img class="add" src="img/jia.png"/><img class="even" src="img/jian.png"/></h4>
+							<div class="join_bot">
+								<p>1、负责公司产品的原型界面及交互设计流程；</p>
+								<p>2、对产品需求有清晰准确的理解能力，定义产品交互模型并执行关键用户流程交互设计；</p>
+								<p>3、组织梳理交互设计规范并负责维护和实施；</p>
+								<p>4、与内部团队以及客户方产品、开发团队协作，提高产品用户体验设计质量。</p>
+							</div>
+						</li>
+						<li>
+							<h4><span>任职要求</span><img class="add" src="img/jia.png"/><img class="even" src="img/jian.png"/></h4>
+							<div class="join_bot">
+								<p>1、至少7年以上用户体验设计相关工作经验，35岁以内；</p>
+								<p>2、对数字媒体领域交互设计和设计研究方面的理论以及实践拥有深刻见解；</p>
+								<p>3、独立的多项目多任务管理能力；</p>
+								<p>4、对用户体验和易用性有敏锐的把握能力；</p>
+								<p>5、良好的带队创作与跨团队合作能力。</p>
+							</div>
+						</li>
+						
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+		<div class="w_wrap w_wrap_4" style="height: auto;">
+			<div class="w">
+				<div class="ind_title" style="color: #FFFFFF;">
+					<h3>关于我们 </h3>
+					<p>合链 ECOblockchain，我们是全球最新区块链技术解决方案提供商。</p>
+				</div>
+				<div class="ind_us" style="overflow: initial; margin-top:222px ;">
+					<img class="us_inner" src="img/1.png"/>
+					<!--<div class="us_top">
+						<img src="img/light45.png"/>
+					</div>-->
+					<div class="us_bottom" style=" height: 232px; top: -206px;" >
+						<p style="text-align: left;">1、产品溯源安全解决方案
+							<br />  
+     每一商品的信息能够在仓储、物流、消费者以及监管机构中共享、共识。基于区块链的溯源平台在链接商品供应链权属关系和转移关系的同时，还有效链接了供应链条中的上下游企业。
+   <br />   	
+2、供应链解决方案
+<br />  
+打通信息流、资金流、物流等信息链条，使供应链更加高效快捷！
+
+</p>
+					</div>
+					<div class="us_left">
+						<p>区块链技术解决方案提供商</p>
+					</div>
+					<div class="us_right">
+						<p>分布全球多个行业</p>
+					</div>
+					<div class="us_bottom">
+						<p style="text-align: left;">北京合链共赢科技公司（简称“合链科技”）以“推动科技发展，成就社会进步”为使命，致力于通过前沿信息技术的研发和应用实践，推动人类社会的发展。合链科技核心团队都来自于世界500强高科技企业，自2014年开始即从事区块链技术的研究，目前已经具备开发高性能、高可扩展性 高可控的区块链底层技术的能力，同时团队能够快速构建上层应用业务以满足<br />大规模用户数量的多样化的商用业务场景。
+</p>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w_wrap foot">
+			<div class="w">
+				<div class="foot_left">
+					<!--<div class="foot_left_le">
+						<img src="img/erweima.png"/>
+						<p>微信公众号：合链</p>
+					</div>-->
+					<div class="foot_left_ri">
+						<h3>联系电话：</h3>
+						<p>010-53359394</p>
+						<h3>联系邮箱：</h3>
+						<p>market@eco-chain.com</p>
+						<h3>联系地址：</h3>
+						<p>北京市朝阳区望京SOHO中心T2C座5层</p>
+					</div>
+				</div>
+				<img class="foot_right" src="img/logo2.png" alt="" />
+			</div>
+		</div>
+		<div class="w_wrap foot_bot">
+			<div class="w ">
+				Copyright © 2017 <ins><a style="color: #a6a6a6;" href="http://www.eco-chain.net" target="_blank">www.eco-chain.com</a></ins>，All Rights Reserved 合链
+			</div>
+		</div>
+		<div class="all_wrap">
+			亲爱的用户，您当前浏览器版本过低，请您升级后再次访问，谢谢！
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/layout.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var browser=navigator.appName
+			var b_version=navigator.appVersion
+			var version=b_version.split(";");
+			var trim_Version=version[1].replace(/[ ]/g,"");
+			if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0")
+			{
+			    $(".all_wrap").css("display","block");
+			}
+			    else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0")
+			{
+			    $(".all_wrap").css("display","block");
+			}else{
+				$(".all_wrap").css("display","none");
+			}
+			</script>
+	</body>
+
+</html>
